@@ -1,6 +1,8 @@
 <?php
 
-
+namespace noble\Controllers;
+Use View as View;
+use Illuminate\Database\Eloquent\Model as Eloquent;
 class Controller
 {
 

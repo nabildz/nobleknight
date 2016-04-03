@@ -1,4 +1,5 @@
 <?php
+namespace noble\Controllers;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 use Illuminate\Database\Capsule\Manager as DBase;                         
@@ -38,13 +39,10 @@ for ($i=0; $i < 3; $i++) {
     public function search($id)
     {
 
-         $user = DBase::table('studets')->find($id);
+         $user = DBase::table('studets')->find($id['id']);
          
 
-//echo $user['name'];
-$this->view('home/search', [
-            'name' => $user['name'],
-        ]);
+echo $user['name'];
 
 
     }
